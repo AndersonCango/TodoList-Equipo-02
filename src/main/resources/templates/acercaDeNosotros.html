@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="fragments :: head(titulo='Acerca de Nosotros')"></head>
+  <body style="background-color: #f8f9fa">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold text-danger">Escuela Politécnica Nacional</h1>
+        <h4 class="text-primary">Aplicación de Gestión de Tareas</h4>
+      </div>
+
+      <!-- Imágenes -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-6 col-md-3 text-center mb-3 mb-md-0">
+          <div
+            class="bg-white rounded shadow d-flex align-items-center justify-content-center"
+            style="width: 250px; height: 250px; margin: auto"
+          >
+            <img
+              src="https://www.cognodata.com/wp-content/uploads/2019/04/Screenshot-2019-07-18-at-13.37.37-min.png"
+              class="img-fluid"
+              alt="Imagen 1"
+              style="max-width: 100%; max-height: 100%; object-fit: contain"
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <div
+            class="bg-white rounded shadow d-flex align-items-center justify-content-center"
+            style="width: 250px; height: 250px; margin: auto"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Escuela_Polit%C3%A9cnica_Nacional.png"
+              class="img-fluid"
+              alt="Imagen 2"
+              style="max-width: 100%; max-height: 100%; object-fit: contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Información personal -->
+      <div class="text-center mb-4">
+        <h2 class="fw-semibold text-dark">Anderson Daniel Cango Samuisa</h2>
+        <h5 class="text-secondary">
+          Metodologías Ágiles - Ingeniería en Software
+        </h5>
+      </div>
+
+      <!-- Descripción del proyecto -->
+      <div class="text-center mx-auto" style="max-width: 800px">
+        <p class="fs-5">
+          Esta aplicación fue desarrollada como parte del proyecto académico en
+          la Escuela Politécnica Nacional, utilizando
+          <strong>Spring Boot</strong> como framework principal y aplicando
+          <strong>metodologías ágiles</strong> para su planificación,
+          implementación y mejora continua.
+        </p>
+        <p class="fs-5">
+          Su objetivo es ofrecer una herramienta eficiente y moderna para la
+          <strong>gestión de tareas</strong>, facilitando el control de
+          actividades, seguimiento de progreso y colaboración entre usuarios.
+          Esta solución está diseñada para ser intuitiva, adaptable y escalable
+          en entornos académicos y profesionales.
+        </p>
+      </div>
+    </div>
+    <div class="text-center">
+      <a class="text-decoration-none" href="/login">Volver</a>
+    </div>
+
+    <div th:replace="fragments::javascript"></div>
+  </body>
+</html>
