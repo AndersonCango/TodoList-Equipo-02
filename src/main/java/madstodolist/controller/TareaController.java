@@ -53,6 +53,8 @@ public class TareaController {
 
         comprobarUsuarioLogeado(idUsuario);
 
+        UsuarioData usuario = usuarioService.findById(idUsuario);
+        model.addAttribute("usuario", usuario);
         tareaService.nuevaTareaUsuario(idUsuario, tareaData.getTitulo());
         flash.addFlashAttribute("mensaje", "Tarea creada correctamente");
         return "redirect:/usuarios/" + idUsuario + "/tareas";
@@ -80,7 +82,8 @@ public class TareaController {
         }
 
         comprobarUsuarioLogeado(tarea.getUsuarioId());
-
+        UsuarioData usuario = usuarioService.findById(tarea.getUsuarioId());
+        model.addAttribute("usuario", usuario);
         model.addAttribute("tarea", tarea);
         tareaData.setTitulo(tarea.getTitulo());
         return "formEditarTarea";
