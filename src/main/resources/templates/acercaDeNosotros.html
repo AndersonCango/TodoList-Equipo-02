@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head th:replace="fragments :: head(titulo='Acerca de Nosotros')"></head>
-  <body style="background-color: #f8f9fa">
+  <body style="background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif">
     <div class="container py-5">
       <div class="text-center mb-5">
         <h1 class="fw-bold text-danger">Escuela Politécnica Nacional</h1>
         <h4 class="text-primary">Aplicación de Gestión de Tareas</h4>
+        <hr class="w-50 mx-auto" />
       </div>
 
-      <!-- Imágenes -->
-      <div class="row justify-content-center mb-5">
-        <div class="col-6 col-md-3 text-center mb-3 mb-md-0">
+      <div class="row justify-content-center mb-5 g-4">
+        <div class="col-6 col-md-4 text-center">
           <div
             class="bg-white rounded shadow d-flex align-items-center justify-content-center"
             style="width: 250px; height: 250px; margin: auto"
           >
             <img
-              src="https://www.cognodata.com/wp-content/uploads/2019/04/Screenshot-2019-07-18-at-13.37.37-min.png"
-              class="img-fluid"
-              alt="Imagen 1"
+              src="https://www.ayselucus.es/sites/default/files/noticias/fotos/c7c646ea-53ff-405c-9d23-4becc12eabb1.jpeg"
+              alt="Equipo"
               style="max-width: 100%; max-height: 100%; object-fit: contain"
             />
           </div>
         </div>
-        <div class="col-6 col-md-3 text-center">
+        <div class="col-6 col-md-4 text-center">
           <div
             class="bg-white rounded shadow d-flex align-items-center justify-content-center"
             style="width: 250px; height: 250px; margin: auto"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Escuela_Polit%C3%A9cnica_Nacional.png"
-              class="img-fluid"
-              alt="Imagen 2"
-              style="max-width: 100%; max-height: 100%; object-fit: contain"
+              src="https://univercimas.com/wp-content/uploads/2021/05/Logo-de-la-Escuela-Politecnica-Nacional-EPN.png"
+              alt="Logo EPN"
+              style="max-width: 80%; max-height: 80%; object-fit: contain"
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-4 text-center">
+          <div
+            class="bg-white rounded shadow d-flex align-items-center justify-content-center"
+            style="width: 250px; height: 250px; margin: auto"
+          >
+            <img
+              src="https://fis.epn.edu.ec/images/logo-FIS-sin-fondo.png"
+              alt="Logo FIS"
+              style="max-width: 80%; max-height: 80%; object-fit: contain"
             />
           </div>
         </div>
       </div>
 
-      <!-- Información personal -->
       <div class="text-center mb-4">
         <h2 class="fw-semibold text-dark">Anderson Daniel Cango Samuisa</h2>
         <h5 class="text-secondary">
@@ -46,26 +55,31 @@
         </h5>
       </div>
 
-      <!-- Descripción del proyecto -->
-      <div class="text-center mx-auto" style="max-width: 800px">
-        <p class="fs-5">
-          Esta aplicación fue desarrollada como parte del proyecto académico en
-          la Escuela Politécnica Nacional, utilizando
-          <strong>Spring Boot</strong> como framework principal y aplicando
-          <strong>metodologías ágiles</strong> para su planificación,
-          implementación y mejora continua.
+      <div class="mx-auto px-3" style="max-width: 1100px">
+        <p class="fs-5 text-justify" style="text-align: justify">
+          Esta aplicación ha sido desarrollada como parte del proyecto académico
+          de la asignatura de <strong>Metodologías Ágiles</strong>, utilizando
+          el framework <strong>Spring Boot</strong> como núcleo tecnológico y
+          aplicando <strong>metodologías ágiles</strong> con uso de herramientas
+          como <strong>Trello & GitHub Projects</strong> para su organización y
+          desarrollo iterativo.
         </p>
-        <p class="fs-5">
-          Su objetivo es ofrecer una herramienta eficiente y moderna para la
-          <strong>gestión de tareas</strong>, facilitando el control de
-          actividades, seguimiento de progreso y colaboración entre usuarios.
-          Esta solución está diseñada para ser intuitiva, adaptable y escalable
-          en entornos académicos y profesionales.
+        <p class="fs-5 text-justify" style="text-align: justify">
+          El sistema permite gestionar tareas de forma eficiente, facilitando la
+          organización personal.. Su diseño modular, interfaz intuitiva y
+          escalabilidad hacen de esta herramienta una solución óptima para
+          entornos académicos y personales.
         </p>
       </div>
-    </div>
-    <div class="text-center">
-      <a class="text-decoration-none" href="/login">Volver</a>
+
+      <div class="text-center mt-5">
+        <a
+          href="/login"
+          class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm"
+        >
+          ← Volver al inicio de sesión
+        </a>
+      </div>
     </div>
 
     <div th:replace="fragments::javascript"></div>
