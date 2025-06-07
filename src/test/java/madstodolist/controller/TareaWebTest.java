@@ -102,13 +102,14 @@ public class TareaWebTest {
         // la acción para crear la nueva tarea.
 
         String urlPeticion = "/usuarios/" + usuarioId.toString() + "/tareas/nueva";
-        String urlAction = "action=\"/usuarios/" + usuarioId.toString() + "/tareas/nueva\"";
 
         this.mockMvc.perform(get(urlPeticion))
-                .andExpect((content().string(allOf(
-                        containsString("form method=\"post\""),
-                        containsString(urlAction)
-                ))));
+                        .andExpect(content().string(allOf(
+                                containsString("<form"),
+                                containsString("method=\"post\""),
+                                containsString("action=\"/usuarios/" + usuarioId.toString() + "/tareas/nueva\"")
+                        )));
+
     }
 
     @Test

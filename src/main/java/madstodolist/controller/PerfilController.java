@@ -19,7 +19,7 @@ public class PerfilController {
     @Autowired
     ManagerUserSession managerUserSession;
 
-    private void comprobarUsuarioLogeado(Long idUsuario) {
+    protected void comprobarUsuarioLogeado(Long idUsuario) {
         Long idUsuarioLogeado = managerUserSession.usuarioLogeado();
         if (!idUsuario.equals(idUsuarioLogeado))
             throw new UsuarioNoLogeadoException();
