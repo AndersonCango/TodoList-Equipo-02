@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class UsuarioService {
@@ -18,6 +20,11 @@ public class UsuarioService {
     Logger logger = LoggerFactory.getLogger(UsuarioService.class);
 
     public enum LoginStatus {LOGIN_OK, USER_NOT_FOUND, ERROR_PASSWORD}
+
+    public UsuarioService(UsuarioRepository usuarioRepository, ModelMapper modelMapper) {
+        this.usuarioRepository = usuarioRepository;
+        this.modelMapper = modelMapper;
+    }
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -71,5 +78,13 @@ public class UsuarioService {
         else {
             return modelMapper.map(usuario, UsuarioData.class);
         }
+    }
+
+    @Transactional(readOnly = true)
+    public List<UsuarioData> findAllUsuarios() {
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        return usuarios.stream()
+                .map(usuario -> modelMapper.map(usuario, UsuarioData.class))
+                .collect(Collectors.toList());
     }
 }
