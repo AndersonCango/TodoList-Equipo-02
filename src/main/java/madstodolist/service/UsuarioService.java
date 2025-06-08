@@ -21,6 +21,11 @@ public class UsuarioService {
 
     public enum LoginStatus {LOGIN_OK, USER_NOT_FOUND, ERROR_PASSWORD}
 
+    public UsuarioService(UsuarioRepository usuarioRepository, ModelMapper modelMapper) {
+        this.usuarioRepository = usuarioRepository;
+        this.modelMapper = modelMapper;
+    }
+
     @Autowired
     private UsuarioRepository usuarioRepository;
     @Autowired
