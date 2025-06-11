@@ -56,7 +56,7 @@ java -jar target/<cualquier-nombre>.jar
 Una vez que la aplicación esté corriendo, podrás acceder a ella en tu navegador en:
 
 ```bash
-http://localhost:8080/practice-01
+http://localhost:8080
 ```
 
 ### Acceso a Trello
