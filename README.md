@@ -58,3 +58,11 @@ Una vez que la aplicación esté corriendo, podrás acceder a ella en tu navegad
 ```bash
 http://localhost:8080/practice-01
 ```
+
+### Acceso a Trello
+
+Para visualizar el segumiento del proyecto, ingrese al siguiente link:
+
+```bash
+https://trello.com/invite/b/6840445f708421fd83693524/ATTI4709f022eba31f032eb51ca65c00de04F1FE892E/springboot-examen-cangoanderson
+```
