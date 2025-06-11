@@ -17,6 +17,42 @@ Aplicación Spring Boot lista para ejecutarse.
 
 ---
 
+## 📦 Docker Hub
+
+🔗 Repositorio público:  
+[https://hub.docker.com/r/danielsamx9/xp-practica](https://hub.docker.com/r/danielsamx9/xp-practica)
+
+---
+
+## ✅ Requisitos
+
+- [Docker](https://www.docker.com/products/docker-desktop) instalado (v20+ recomendado)
+- Acceso a internet para descargar la imagen desde Docker Hub
+
+---
+
+## 🧪 Cómo ejecutar el docker
+
+### 1. Descargar la imagen desde Docker Hub
+
+```bash
+docker pull danielsamx9/xp-practica
+```
+
+### 2. Ejecutar la imagen
+
+```bash
+docker run -p 8080:8080 danielsamx9/xp-practica
+```
+
+### 3. Accede desde el navegador
+
+```bash
+http://localhost:8080
+```
+
+---
+
 ## 🧪 Cómo ejecutar con git
 
 ### 1. Clona el repositorio
