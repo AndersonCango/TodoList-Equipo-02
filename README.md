@@ -11,7 +11,7 @@
   <a href="https://openjdk.java.net/" target="_blank">JDK</a>
 </p>
 
-# 🧩 App Spring Boots - ToDo App
+# 🧩 App Spring Boot - ToDo App
 
 Aplicación Spring Boot lista para ejecutarse.  
 
