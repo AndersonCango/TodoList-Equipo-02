@@ -22,7 +22,7 @@ Aplicación Spring Boot lista para ejecutarse.
 ### 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/AndersonCango/practica01-springboot-AndersonCango.git
+git clone https://github.com/AndersonCango/Practica-02-Applicacion-ToDo-AndersonCango.git
 ```
 
 ### 2. Instalar las dependencias
